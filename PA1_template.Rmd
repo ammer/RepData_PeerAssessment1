@@ -34,7 +34,7 @@ names(sums) <- list("date", "steps")
 1. Make a histogram of the total number of steps taken each day
 
 ```{r}
-hist(sums$steps, breaks = 10, main = "Steps in one day")
+hist(sums$steps, breaks = 10, main = "Steps in one day", xlab = "Steps")
 ```
 
 2. Calculate and report the mean and median total number of steps taken per day
@@ -91,7 +91,7 @@ data3 <- mutate(data, steps = ifelse(is.na(steps), 0, steps))
 ```{r}
 sums2 <- aggregate(data3$steps, list(data3$date), sum)
 names(sums2) <- list("date", "steps")
-hist(sums2$steps, breaks = 10, main = "Steps in one day")
+hist(sums2$steps, breaks = 10, main = "Steps in one day", xlab = "Steps")
 ```
 
 Steps of each day:
