@@ -1,6 +1,6 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
-output: 
+output: ["md_document", "html_document"]
 html_document: "PA1_template.html"
 keep_md: true
 ---
