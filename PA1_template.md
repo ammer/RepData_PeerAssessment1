@@ -3,6 +3,17 @@ Loading and preprocessing the data
 
     library(dplyr)
 
+    ## 
+    ## Attaching package: 'dplyr'
+
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+
     con <- unz("activity.zip", "activity.csv")
     open(con)
     data <- read.csv(con)
@@ -31,7 +42,7 @@ What is mean total number of steps taken per day?
 
     hist(sums$steps, breaks = 10, main = "Steps in one day", xlab = "Steps")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-4-1.png)
 
 1.  Calculate and report the mean and median total number of steps taken
     per day
@@ -66,7 +77,7 @@ What is the average daily activity pattern?
       
     plot(data2$interval, data2$mean.steps, type = "l", xlab = "Interval", ylab = "Steps", main = "Average number of steps")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
 1.  Which 5-minute interval, on average across all the days in the
     dataset, contains the maximum number of steps?
@@ -117,7 +128,7 @@ Imputing missing values
     names(sums2) <- list("date", "steps")
     hist(sums2$steps, breaks = 10, main = "Steps in one day", xlab = "Steps")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-13-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-11-1.png)
 
 Steps of each day:
 
@@ -169,4 +180,4 @@ Are there differences in activity patterns between weekdays and weekends?
            xlab = "Number of steps", ylab = "Interval",
            type = 'l', layout = c(1,2))
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-19-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-17-1.png)
