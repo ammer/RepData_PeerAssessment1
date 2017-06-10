@@ -1,3 +1,8 @@
+Course project 1 for Reproducible Research 
+
+----
+origin readme.md
+
 ## Introduction
 
 It is now possible to collect a large amount of data about personal
